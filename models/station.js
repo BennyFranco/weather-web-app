@@ -1,13 +1,13 @@
 /**
  * Created by Benny on 27/03/16.
  */
-var mongoose = require('mongoose');
-var SensorSchema = require('sensor')
+var mongoose = require('mongoose'),
+    Schema   = mongoose.Schema;
 
-var StationSchema = new mongoose.Schema({
+var StationSchema = Schema({
     name: String,
-    datetime: String,
-    sensors: [SensorSchema]
+    DateTime: String
+    //sensors: [sensor]
 });
 
-module.exports = mongoose.model('Todo', StationSchema);
+module.exports = mongoose.model('JAZMIN', StationSchema);

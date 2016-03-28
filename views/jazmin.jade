@@ -5,8 +5,13 @@ extends layout
 
 block content
     h1.
-        Jazmin Demo Data
-    ul
-        each doc, i in jazmin
-            li
-                a(href="#")= doc
+        Estacion #{stationName}
+
+    each stationDateTime, i in dataDateTime
+        = stationDateTime
+        br
+        each sensor, j in stationSensors[i]
+            = j + ": " + sensor
+            br
+        br
+        br
